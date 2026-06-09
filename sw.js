@@ -1,5 +1,4 @@
-// sw.js - Service Worker pour la PWA Gestion Scolaire
-const CACHE_NAME = 'gestionscolaire-v1';
+const CACHE_NAME = 'gestionscolaire-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -15,8 +14,11 @@ const ASSETS_TO_CACHE = [
   '/js/modules/rapports.js',
   '/js/modules/exportimport.js',
   '/js/modules/archives.js',
-  // La bibliothèque SQLite est chargée depuis un CDN, on la met en cache aussi
-  'https://cdn.jsdelivr.net/npm/@sqlite.org/sqlite-wasm@latest/dist/sqlite-wasm.js'
+  '/js/vendor/sqlite3.mjs',
+  '/js/vendor/sqlite3.wasm',
+  '/js/vendor/sqlite3-opfs-async-proxy.js',
+  '/coi-serviceworker.js',
+  '/manifest.json'
 ];
 
 // Installation : mise en cache de tous les fichiers essentiels
