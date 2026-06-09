@@ -8,6 +8,14 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2c3e50">
     <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <!-- Active les headers COOP/COEP pour OPFS sur GitHub Pages -->
+    <script>
+        if (typeof SharedArrayBuffer === 'undefined') {
+            const script = document.createElement('script');
+            script.src = '/coi-serviceworker.js';
+            document.head.appendChild(script);
+        }
+    </script>
 </head>
 <body>
     <header>
